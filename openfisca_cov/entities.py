@@ -61,4 +61,18 @@ Person = build_entity(
     is_person = True,
     )
 
-entities = [Household, Person]
+BusinessLicense = build_entity(
+    key = "business_license",
+    plural = "business_licenses",
+    label = "Business License",
+    doc="test",
+    roles=[
+        {
+            "key": "owner",
+            "plural": "owners",
+            "label": "Owners",
+            "doc": "The Business Owner",
+        }
+    ])
+
+entities = [Household, BusinessLicense, Person]

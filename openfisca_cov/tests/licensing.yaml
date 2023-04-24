@@ -1,0 +1,19 @@
+# Test files describe situations and their expected outcomes
+# We can run this test on our command line using `openfisca test licensing.yaml`
+
+- name: License requires clearance
+  period: ETERNITY
+  input:
+    business_type: fitness_centre
+  output:
+    requires_clearance: True
+
+
+- name: Fees calculated accurately
+  period: 2023
+  input:
+    business_type: [fitness_centre, barber]
+  output:
+    licensing_fee: 
+      2022: [90, 400]
+      2023: [100, 500]
