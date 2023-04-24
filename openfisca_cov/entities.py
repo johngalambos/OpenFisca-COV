@@ -71,7 +71,7 @@ BusinessLicense = build_entity(
             "key": "owner",
             "plural": "owners",
             "label": "Owners",
-            "doc": "The Business Owner",
+            "doc": "The Business Owner."
         }
     ])
 

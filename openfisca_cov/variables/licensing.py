@@ -1,5 +1,5 @@
 from openfisca_core.variables import Variable
-from openfisca_core.indexed_enums import Enum
+from openfisca_core import indexed_enums
 from openfisca_core import periods, variables
 
 # Import the Entities specifically defined for this tax and benefit system
@@ -11,13 +11,13 @@ class requires_clearance(Variable):
     default_value = True
     definition_period = periods.ETERNITY
 
-class BusinessType(Enum):
+class BusinessType(indexed_enums.Enum):
     __order__ = "fitness_centre barber"
     fitness_centre = "Fitness Centre"
     barber = "Barber"
 
 class business_type(Variable):
-    value_type = Enum
+    value_type = indexed_enums.Enum
     possible_values = BusinessType
     default_value = BusinessType.fitness_centre
     entity = BusinessLicense

@@ -1,0 +1,14 @@
+POST http://localhost:5000/calculate HTTP/1.1
+content-type: application/json
+
+{
+    "persons": {
+        "John": { }
+    },
+    "business_licenses":  {
+        "test": {
+            "business_type": { "ETERNITY": "fitness_centre" },
+            "licensing_fee": { "2023": null }
+        }
+    }
+}
