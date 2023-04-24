@@ -14,7 +14,6 @@ dist
 .python-version
 .settings
 .spyderproject
-.vscode
 
 # OS stuff
 
