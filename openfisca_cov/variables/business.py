@@ -1,10 +1,16 @@
-from openfisca_core.variables import Variable
+"""
+This file defines variables for the modelled legislation.
+
+A variable is a property of an Entity such as a Person, a Household…
+
+See https://openfisca.org/doc/key-concepts/variables.html
+"""
+
 from openfisca_core import indexed_enums
 from openfisca_core import periods, variables
-from numpy import equal,char
-
 # Import the Entities specifically defined for this tax and benefit system
 from openfisca_cov.entities import Business
+
 
 class BusinessType(indexed_enums.Enum):
     __order__ = "backyard_pay_parking barber beauty_salon fitness_centre liquor_establishment"
@@ -15,7 +21,7 @@ class BusinessType(indexed_enums.Enum):
     liquor_establishment = "Liquor Establishment"
 
 
-class business_type(Variable):
+class business_type(variables.Variable):
     value_type = indexed_enums.Enum
     possible_values = BusinessType
     entity = Business
@@ -24,21 +30,21 @@ class business_type(Variable):
     label = "The type of the business"
 
 
-class floor_area(Variable):
+class floor_area(variables.Variable):
     value_type = float
     entity = Business
     definition_period = periods.ETERNITY
     label = "The floor area of the business"
 
 
-class person_capacity(Variable):
+class person_capacity(variables.Variable):
     value_type = int
     entity = Business
     definition_period = periods.ETERNITY
     label = "The person capacity of the business"
 
 
-class parking_spaces(Variable):
+class parking_spaces(variables.Variable):
     value_type = int
     entity = Business
     definition_period = periods.ETERNITY
