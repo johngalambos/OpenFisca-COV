@@ -1,0 +1,46 @@
+- name: Test minimum fee
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+      "Jack2":
+        birth: 1980-12-31
+      "Jack3":
+        birth: 1980-12-31
+    businesses:
+      BusinessA:
+        owners: ["Jack"]
+        person_capacity: 2
+        business_type: liquor_establishment
+      BusinessB:
+        owners: ["Jack2"]
+        person_capacity: 100
+        business_type: liquor_establishment
+      BusinessC:
+        owners: ["Jack3"]
+        person_capacity: 100
+        business_type: barber
+  output:
+    businesses:
+      BusinessA:
+        extended_liquor__class: 
+          2023: 1
+        extended_liquor__fee:  
+          2023: 171
+        extended_liquor__applicable:  
+          2023: True
+      BusinessB:
+        extended_liquor__class:  
+          2023: 2
+        extended_liquor__fee:  
+          2023: 1930.0
+        extended_liquor__applicable:  
+          2023: True
+      BusinessC:
+        extended_liquor__class:  
+          2023: 0
+        extended_liquor__fee:  
+          2023: 0
+        extended_liquor__applicable:  
+          2023: False

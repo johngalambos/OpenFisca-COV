@@ -1,0 +1,47 @@
+{
+  "structure": [
+    {
+      "Title": "LICENSE BY-LAW NO. 4450",
+      "Prefix": "business_licences",
+      "Type": "By-law",
+      "Reference": "https://bylaws.vancouver.ca/4450c.PDF",
+      "Children": [
+        "backyard_pay_parking",
+        "barber",
+        "beauty_salon",
+        "extended_liquor",
+        "standard_liquor"
+      ]
+    },
+    {
+      "Title": "Backyard Pay Parking",
+      "Prefix": "backyard_pay_parking",
+      "Type": "Section",
+      "Reference": "https://bylaws.vancouver.ca/4450c.PDF"
+    },
+    {
+      "Title": "Barber Shop",
+      "Prefix": "barber",
+      "Type": "Section",
+      "Reference": "https://bylaws.vancouver.ca/4450c.PDF"
+    },
+    {
+      "Title": "Beauty Salon",
+      "Prefix": "beauty_salon",
+      "Type": "Section",
+      "Reference": "https://bylaws.vancouver.ca/4450c.PDF"
+    },
+    {
+      "Title": "Extended Hours Liquor Establishment",
+      "Prefix": "extended_liquor",
+      "Type": "Section",
+      "Reference": "https://bylaws.vancouver.ca/4450c.PDF"
+    },
+    {
+      "Title": "Standard Hours Liquor Establishment",
+      "Prefix": "standard_liquor",
+      "Type": "Section",
+      "Reference": "https://bylaws.vancouver.ca/4450c.PDF"
+    }
+  ]
+}

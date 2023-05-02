@@ -1,0 +1,25 @@
+POST http://localhost:5000/calculate HTTP/1.1
+content-type: application/json
+
+{
+    "persons": {
+        "John": {}
+    },
+    "businesses": {
+        "business_1": {
+            "owners": ["John"],
+            "parking_spaces": { 
+                "ETERNITY": "3"
+            },
+            "business_type": { 
+                "ETERNITY": "backyard_pay_parking"
+            },
+            "backyard_pay_parking__applicable": {
+              "2023": null
+            },
+            "backyard_pay_parking__fee": {
+              "2023": null
+            }
+        }
+    }
+}

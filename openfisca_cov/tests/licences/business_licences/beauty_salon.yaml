@@ -1,0 +1,27 @@
+- name: Test  fee
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+      "Jack2":
+        birth: 1980-12-31
+    businesses:
+      BusinessA:
+        owners: ["Jack"]
+        business_type: beauty_salon
+      BusinessB:
+        owners: ["Jack2"]
+        business_type: barber
+  output:
+    businesses:
+      BusinessA:
+        beauty_salon__fee:  
+          2023: 313
+        beauty_salon__applicable:  
+          2023: True
+      BusinessB:
+        beauty_salon__fee:  
+          2023: 0
+        beauty_salon__applicable:  
+          2023: False

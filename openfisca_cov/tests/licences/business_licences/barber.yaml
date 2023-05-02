@@ -1,0 +1,27 @@
+- name: Test  fee
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+      "Jack2":
+        birth: 1980-12-31
+    businesses:
+      BusinessA:
+        owners: ["Jack"]
+        business_type: barber
+      BusinessB:
+        owners: ["Jack2"]
+        business_type: liquor_establishment
+  output:
+    businesses:
+      BusinessA:
+        barber__fee:  
+          2023: 313
+        barber__applicable:  
+          2023: True
+      BusinessB:
+        barber__fee:  
+          2023: 0
+        barber__applicable:  
+          2023: False

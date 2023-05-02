@@ -1,0 +1,8 @@
+description: Beauty Salon license fees
+documentation: Licence fee paramaters for Beauty Salon
+reference: https://bylaws.vancouver.ca/4450c.PDF
+metadata:
+  unit: currency-CAD
+values:
+  "2023": 
+    value: 313

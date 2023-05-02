@@ -13,7 +13,6 @@ from datetime import date
 from numpy import where
 from openfisca_core.periods import ETERNITY, MONTH
 from openfisca_core.variables import Variable
-
 # Import the Entities specifically defined for this tax and benefit system
 from openfisca_cov.entities import Person
 
