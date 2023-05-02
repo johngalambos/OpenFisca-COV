@@ -1,0 +1,22 @@
+POST http://localhost:5000/calculate HTTP/1.1
+content-type: application/json
+
+{
+    "persons": {
+        "John": {}
+    },
+    "businesses": {
+        "business_1": {
+            "owners": ["John"],
+            "business_type": { 
+                "ETERNITY": "beauty_salon"
+            },
+            "beauty_salon__applicable": {
+              "2023": null
+            },
+            "beauty_salon__fee": {
+              "2023": null
+            }
+        }
+    }
+}

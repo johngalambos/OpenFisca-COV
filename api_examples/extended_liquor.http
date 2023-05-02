@@ -1,0 +1,28 @@
+POST http://localhost:5000/calculate HTTP/1.1
+content-type: application/json
+
+{
+    "persons": {
+        "John": {}
+    },
+    "businesses": {
+        "business_1": {
+            "owners": ["John"],
+            "person_capacity": { 
+                "ETERNITY": "80"
+            },
+            "business_type": { 
+                "ETERNITY": "liquor_establishment"
+            },
+            "floor_area": { 
+                "ETERNITY": "200"
+            },
+            "extended_liquor__class": {
+              "2023": null
+            },
+            "extended_liquor__fee": {
+              "2023": null
+            }
+        }
+    }
+}
