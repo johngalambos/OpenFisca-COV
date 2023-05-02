@@ -1,0 +1,74 @@
+- name: Test backyard_pay_parking fees
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+      "Jack2":
+        birth: 1980-12-31
+      "Jack3":
+        birth: 1980-12-31
+      "Jack4":
+        birth: 1980-12-31
+      "Jack5":
+        birth: 1980-12-31
+      "Jack6":
+        birth: 1980-12-31
+    businesses:
+      BusinessA:
+        owners: ["Jack"]
+        parking_spaces: 0
+        business_type: backyard_pay_parking
+      BusinessB:
+        owners: ["Jack2"]
+        parking_spaces: 1
+        business_type: backyard_pay_parking
+      BusinessC:
+        owners: ["Jack3"]
+        parking_spaces: 2
+        business_type: backyard_pay_parking
+      BusinessD:
+        owners: ["Jack4"]
+        parking_spaces: 3
+        business_type: backyard_pay_parking
+      BusinessE:
+        owners: ["Jack5"]
+        parking_spaces: 4
+        business_type: backyard_pay_parking
+      BusinessF:
+        owners: ["Jack6"]
+        parking_spaces: 5
+        business_type: barber
+  output:
+    businesses:
+      BusinessA:
+        backyard_pay_parking__fee:  
+          2023: 0
+        backyard_pay_parking__applicable:  
+          2023: True
+      BusinessB:
+        backyard_pay_parking__fee:  
+          2023: 158.0
+        backyard_pay_parking__applicable:  
+          2023: True
+      BusinessC:
+        backyard_pay_parking__fee:  
+          2023: 158.0
+        backyard_pay_parking__applicable:  
+          2023: True
+      BusinessD:
+        backyard_pay_parking__fee:  
+          2023: 226.0
+        backyard_pay_parking__applicable:  
+          2023: True
+      BusinessE:
+        backyard_pay_parking__fee:  
+          2023: 294.0
+        backyard_pay_parking__applicable:  
+          2023: True
+      BusinessF:
+        backyard_pay_parking__fee:  
+          2023: 0
+        backyard_pay_parking__applicable:  
+          2023: False
+

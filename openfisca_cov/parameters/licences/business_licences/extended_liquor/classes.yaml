@@ -1,0 +1,51 @@
+description: Extended Hours Liquor Establishment Classes
+metadata:
+# single_amount or marginal_rate or marginal_amount or value?
+  type: single_amount
+  reference:
+    2023-04-11:
+      title: LICENSE BY-LAW NO. 4450
+      href: https://bylaws.vancouver.ca/4450c.PDF
+brackets:
+  - amount:
+      2023-01-01:
+        value: 1
+    threshold:
+      2023-01-01:
+        value: 0
+  - amount:
+      2023-01-01:
+        value: 2
+    threshold:
+      2023-01-01:
+        value: 66
+  - amount:
+      2023-01-01:
+        value: 3
+    threshold:
+      2023-01-01:
+        value: 151
+  - amount:
+      2023-01-01:
+        value: 4
+    threshold:
+      2023-01-01:
+        value: 301
+  - amount:
+      2023-01-01:
+        value: 5
+    threshold:
+      2023-01-01:
+        value: 501
+  - amount:
+      2023-01-01:
+        value: 6
+    threshold:
+      2023-01-01:
+        value: 951
+  - amount:
+      2023-01-01:
+        value: 7
+    threshold:
+      2023-01-01:
+        value: -1

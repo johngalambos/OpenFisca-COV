@@ -44,6 +44,53 @@ Household = build_entity(
         ],
     )
 
+Business = build_entity(
+    key = "business",
+    plural = "businesses",
+    label = "Business",
+    doc="""
+
+    test
+    """,
+    roles=[
+        {
+            "key": "owner",
+            "plural": "owners",
+            "label": "Owners",
+            "doc": "The Business Owner.",
+            },
+        ],
+    )
+
+TitledProperty = build_entity(
+    key="titled_property",
+    plural="titled_properties",
+    label="Titled Property",
+    doc="""
+    A Titled property represents a property that is owned by a Person or group of Persons.
+
+    Example usage:
+    Check the number of individuals of a specific role: check how many persons co-own the property: `titled_properties.nb_persons(Titled_Property.OWNER)`.
+    Calculate a variable applied to each tenant of the group entity: calculate the income of each member of the Property: `tenants_incomes = titled_properties.members("income", period = MONTH); tenants_total_income = titled_properties.sum(tenants_incomes)`.
+
+    For more information on group entities, see: http://openfisca.org/doc/coding-the-legislation/50_entities.html
+    """,
+    roles=[
+        {
+            "key": "owner",
+            "plural": "owners",
+            "label": "Owners",
+            "doc": "The one or more persons who hold title for the property.",
+            },
+        {
+            "key": "other",
+            "plural": "others",
+            "label": "Others",
+            "doc": "People who are not in any other role",
+            },
+        ],
+    )
+
 Person = build_entity(
     key = "person",
     plural = "persons",
@@ -61,18 +108,4 @@ Person = build_entity(
     is_person = True,
     )
 
-BusinessLicense = build_entity(
-    key = "business_license",
-    plural = "business_licenses",
-    label = "Business License",
-    doc="test",
-    roles=[
-        {
-            "key": "owner",
-            "plural": "owners",
-            "label": "Owners",
-            "doc": "The Business Owner."
-        }
-    ])
-
-entities = [Household, BusinessLicense, Person]
+entities = [Household, Business, TitledProperty, Person]

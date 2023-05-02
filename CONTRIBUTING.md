@@ -96,3 +96,19 @@ Each change must be documented with the following elements:
 >      - All parameters are assumed to be valid until and end date is explicitely specified with an `<END>` tag
 
 When a Pull Request contains several disctincts changes, several paragraphs may be added to the Changelog. To be properly formatted in Markdown, these paragraphs must be separated by `<!-- -->`.
+
+
+$~$
+<a name="patterns"></a>
+
+## Patterns
+
+The best approach when interpreting natural language law in code is to mimic the structure of the natural language text as closely as possible.
+
+This project currently utilises specific patterns however for licences. The following is an example based on the `LICENSE BY-LAW NO. 4450` > `Extended Hours Liquor Establishment` licence.
+
+- `extended_liquor__applicable` (true/false)
+- `extended_liquor__class` (int)
+- `extended_liquor__fee` (float)
+
+

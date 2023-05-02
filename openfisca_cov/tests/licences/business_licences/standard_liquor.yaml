@@ -1,0 +1,54 @@
+- name: Test standard fee
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+      "Jack2":
+        birth: 1980-12-31
+    businesses:
+      BusinessA:
+        owners: ["Jack"]
+        person_capacity: 2
+        business_type: liquor_establishment
+      BusinessB:
+        owners: ["Jack2"]
+        person_capacity: 100
+        business_type: liquor_establishment
+  output:
+    businesses:
+      BusinessA:
+        standard_liquor__fee: 171
+        standard_liquor__class: 1
+        standard_liquor__applicable: True
+      BusinessB:
+        standard_liquor__fee: 605.0
+        standard_liquor__class: 2
+        standard_liquor__applicable: True
+- name: Test against not liquor establishments
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+      "Jack2":
+        birth: 1980-12-31
+    businesses:
+      BusinessA:
+        owners: ["Jack"]
+        person_capacity: 2
+        business_type: barber
+      BusinessB:
+        owners: ["Jack2"]
+        person_capacity: 100
+        business_type: barber
+  output:
+    businesses:
+      BusinessA:
+        standard_liquor__fee: 0
+        standard_liquor__class: 0
+        standard_liquor__applicable: False
+      BusinessB:
+        standard_liquor__fee: 0
+        standard_liquor__class: 0
+        standard_liquor__applicable: False

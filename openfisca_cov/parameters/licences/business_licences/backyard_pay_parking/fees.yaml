@@ -1,0 +1,18 @@
+#  One Yaml file can contain nested parameters
+description: Licence fee paramaters for extended liquor
+documentation: Licence fee paramaters for extended liquor
+reference: https://bylaws.vancouver.ca/4450c.PDF
+first_two_spaces:
+  description: Per space fee for first two backyard pay parking spaces
+  metadata:
+    unit: currency-CAD
+  values:
+    "2023": 
+      value: 158
+additional_spaces:
+  description: Per space fee for additional backyard pay parking spaces
+  metadata:
+    unit: currency-CAD
+  values:
+    "2023": 
+      value: 68

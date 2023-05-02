@@ -1,0 +1,8 @@
+description: Barber Shop license fees
+documentation: Licence fee paramaters for Barber Shop
+reference: https://bylaws.vancouver.ca/4450c.PDF
+metadata:
+  unit: currency-CAD
+values:
+  "2023": 
+    value: 313

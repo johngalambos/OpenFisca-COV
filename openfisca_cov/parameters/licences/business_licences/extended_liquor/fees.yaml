@@ -1,0 +1,25 @@
+#  One Yaml file can contain nested parameters
+description: Licence fee paramaters for extended liquor
+documentation: Licence fee paramaters for extended liquor
+reference: https://bylaws.vancouver.ca/4450c.PDF
+per_person:
+  description: Per person fee as per Appendix A, LICENSE BY-LAW NO. 4450
+  metadata:
+    unit: currency-CAD
+  values:
+    "2023": 
+      value: 19.30
+minimum:
+  description: Minimum licence fee as per Appendix A, LICENSE BY-LAW NO. 4450
+  metadata:
+    unit: currency-CAD
+  values:
+    "2023": 
+      value: 171.00
+maximum:
+  description: Maximum licence fee as per Appendix A, LICENSE BY-LAW NO. 4450
+  metadata:
+    unit: currency-CAD
+  values:
+    "2023": 
+      value: 25986.00
