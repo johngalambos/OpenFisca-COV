@@ -1,0 +1,30 @@
+- name: Laneway House Permit
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+    titled_properties:
+      Property_A:
+        owners: ["Jack"]
+        zone: "RS_1"
+  output:
+    titled_properties:
+      Property_A:
+        laneway_house__applicable:  
+          2023: True
+- name: Laneway House Permit Not Applicable
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+    titled_properties:
+      Property_A:
+        owners: ["Jack"]
+        zone: "C_1"
+  output:
+    titled_properties:
+      Property_A:
+        laneway_house__applicable:  
+          2023: False
