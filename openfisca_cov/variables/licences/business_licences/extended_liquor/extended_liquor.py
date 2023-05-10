@@ -8,6 +8,7 @@ See https://openfisca.org/doc/key-concepts/variables.html
 
 from numpy import clip
 from openfisca_core import periods, variables
+
 # Import the Entities specifically defined for this tax and benefit system
 from openfisca_cov.entities import Business
 from openfisca_cov.variables.business import BusinessType
