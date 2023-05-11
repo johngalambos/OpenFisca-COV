@@ -1,0 +1,19 @@
+POST http://localhost:5000/calculate HTTP/1.1
+content-type: application/json
+
+{
+    "persons": {
+        "John": {}
+    },
+    "titled_properties": {
+        "Property_A": {
+            "owners": ["John"],
+            "zone": { 
+                "ETERNITY": "RS_1"
+            },
+            "laneway_house__applicable": {
+              "2023": null
+            }
+        }
+    }
+}

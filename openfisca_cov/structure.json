@@ -1,6 +1,25 @@
 {
   "structure": [
     {
+      "Title": "Licenses Category",
+      "Prefix": "licences",
+      "Type": "Section",
+      "Reference": "",
+      "Children": [
+        "business_licences"
+      ]
+    },
+    {
+      "Title": "Permits Category",
+      "Prefix": "permits",
+      "Type": "Section",
+      "Reference": "",
+      "Children": [
+        "laneway_house",
+        "tree"
+      ]
+    },
+    {
       "Title": "LICENSE BY-LAW NO. 4450",
       "Prefix": "business_licences",
       "Type": "By-law",
@@ -42,6 +61,18 @@
       "Prefix": "standard_liquor",
       "Type": "Section",
       "Reference": "https://bylaws.vancouver.ca/4450c.PDF"
+    },
+    {
+      "Title": "Laneway House",
+      "Prefix": "laneway_house",
+      "Type": "Section",
+      "Reference": "TODO"
+    },
+    {
+      "Title": "Tree Permits",
+      "Prefix": "tree",
+      "Type": "Section",
+      "Reference": "https://bylaws.vancouver.ca/9958c.PDF"
     }
   ]
 }
