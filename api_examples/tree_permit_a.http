@@ -1,0 +1,22 @@
+POST http://localhost:5000/calculate HTTP/1.1
+content-type: application/json
+
+{
+    "persons": {
+        "John": {}
+    },
+    "titled_properties": {
+        "Property_A": {
+            "owners": ["John"],
+            "tree_permit__part_of_hedge": { 
+                "ETERNITY": false
+            },
+            "tree_permit__within_threshold": { 
+                "ETERNITY": false
+            },
+            "tree_permit__required": {
+              "2023": null
+            }
+        }
+    }
+}

@@ -16,7 +16,7 @@
       "Reference": "",
       "Children": [
         "laneway_house",
-        "tree"
+        "tree_permit"
       ]
     },
     {
@@ -69,8 +69,8 @@
       "Reference": "TODO"
     },
     {
-      "Title": "Tree Permits",
-      "Prefix": "tree",
+      "Title": "Tree Permit",
+      "Prefix": "tree_permit",
       "Type": "Section",
       "Reference": "https://bylaws.vancouver.ca/9958c.PDF"
     }

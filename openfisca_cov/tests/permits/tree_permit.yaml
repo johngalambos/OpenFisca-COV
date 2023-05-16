@@ -1,0 +1,112 @@
+- name: Tree Permit not required when part of hedge
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+    titled_properties:
+      Property_A:
+        owners: ["Jack"]
+        tree_permit__part_of_hedge: True
+        tree_permit__within_threshold: False
+  output:
+    titled_properties:
+      Property_A:
+        tree_permit__required:  
+          2023: False
+- name: Tree Permit not required when part of hedge and within threshold
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+    titled_properties:
+      Property_A:
+        owners: ["Jack"]
+        tree_permit__part_of_hedge: True
+        tree_permit__within_threshold: True
+  output:
+    titled_properties:
+      Property_A:
+        tree_permit__required:  
+          2023: False
+- name: Tree Permit not required when not part of hedge and within threshold
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+    titled_properties:
+      Property_A:
+        owners: ["Jack"]
+        tree_permit__part_of_hedge: False
+        tree_permit__within_threshold: True
+  output:
+    titled_properties:
+      Property_A:
+        tree_permit__required:
+          2023: False
+- name: Tree Permit required when not part of hedge and outside threshold
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+    titled_properties:
+      Property_A:
+        owners: ["Jack"]
+        tree_permit__part_of_hedge: False
+        tree_permit__within_threshold: False
+  output:
+    titled_properties:
+      Property_A:
+        tree_permit__required:  
+          2023: True
+- name: Tree Permit required when not part of hedge and combined diamter is less than 20cm
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+    titled_properties:
+      Property_A:
+        owners: ["Jack"]
+        tree_permit__part_of_hedge: False
+        tree_permit__combined_diameter: 18
+  output:
+    titled_properties:
+      Property_A:
+        tree_permit__required:  
+          2023: False
+- name: Tree Permit required when not part of hedge and combined diamter is 22cm
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+    titled_properties:
+      Property_A:
+        owners: ["Jack"]
+        tree_permit__part_of_hedge: False
+        tree_permit__combined_diameter: 22
+  output:
+    titled_properties:
+      Property_A:
+        tree_permit__required:  
+          2023: True
+- name: Tree Permit required when not part of hedge and combined diamter is 20cm
+  period: 2023
+  input:
+    persons: 
+      "Jack":
+        birth: 1980-12-31
+    titled_properties:
+      Property_A:
+        owners: ["Jack"]
+        tree_permit__part_of_hedge: False
+        tree_permit__combined_diameter: 20
+  output:
+    titled_properties:
+      Property_A:
+        tree_permit__required:  
+          2023: True

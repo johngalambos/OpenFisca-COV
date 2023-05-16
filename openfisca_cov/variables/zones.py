@@ -11,6 +11,7 @@ from openfisca_core import periods, variables
 
 from openfisca_cov.entities import TitledProperty
 
+
 # Not necessarily a complete list, needs comprehensive review
 class Zones(indexed_enums.Enum):
     __order__ = "BCPED C_1 C_2 C_2B C_2C C_2C1 C_3 C_3A C_4 C_5 C_5A C_6 C_7 CD_1 DD DEOD FC_1 FC_2 FCCDD FSHCA HA_1 HA_1A HA_2 HA_3 IC_1 IC_2 IC_3 I_1 I_1A I_1B I_2 I_3 I_4 M_1 M_1A M_2 MC_1 RM_1 RM_1N RM_2 RM_3 RM_3A RM_4 RM_4N RM_5 RM_5A RM_5B RM_5C RM_5D RM_7N RM_7AN RM_8A RM_8AN RM_9A RM_9AN RM_9BN RM_10N RM_11 RM_11N RM_12N RS_1 RS_1A RS_2 RS_3 RS_4 RS_5 RS_6 RS_7 RT_1 RT_2 RT_3 RT_4 RT_4AN RT_4N RT_5 RT_5N RT_6 RT_7 RT_8 RT_9 RT_10 RT_10N RT_11 RT_11N RT_12 RT_12N"
