@@ -1,0 +1,8 @@
+description: Diameter threshold for exempting small trees
+documentation: See referenced by-law section 2.2 Exemption for small trees
+reference: https://bylaws.vancouver.ca/9958c.PDF https://bylaws.vancouver.ca/Tree/sec04.pdf
+metadata:
+  unit: cm
+values:
+  "2023": 
+    value: 20
